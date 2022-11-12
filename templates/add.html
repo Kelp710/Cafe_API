@@ -1,0 +1,71 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block styles %}
+{{ super()}}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1 class="add_title">Add a new cafe into the database</h1>
+              {{ wtf.quick_form(form, novalidate=True) }}
+<!--      <form method="POST" action="{{ url_for('add_cafe') }}" novalidate>-->
+<!--          {{ form.csrf_token }}-->
+<!--          <p class="box">-->
+<!--              {{form.cafe.label}}<br><span style="color:black">{{ form.cafe(size=50) }}</span>-->
+<!--              {% for error in form.cafe.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <p>-->
+<!--              {{form.location.label}}<br><span style="color:black">{{ form.location(size=50) }}</span>-->
+<!--              {% for error in form.location.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <p>-->
+<!--              {{form.open_hour.label}}<br><span style="color:black">{{ form.open_hour(size=50) }}</span>-->
+<!--              {% for error in form.open_hour.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <p>-->
+<!--              {{form.close_hour.label}}<br><span style="color:black">{{ form.close_hour(size=50) }}</span>-->
+<!--              {% for error in form.close_hour.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <p>-->
+<!--              {{form.coffee.label}}<br><span style="color:black">{{ form.coffee }}</span>-->
+<!--              {% for error in form.coffee.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <p>-->
+<!--              {{form.wifi.label}}<br><span style="color:black">{{ form.wifi }}</span>-->
+<!--              {% for error in form.wifi.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <p>-->
+<!--              {{form.power.label}}<br><span style="color:black">{{ form.power}}</span>-->
+<!--              {% for error in form.power.errors %}-->
+<!--              <Span style="color:red">{{error}}</Span>-->
+<!--              {% endfor %}-->
+<!--          </p>-->
+<!--          <span style="color:black">{{ form.submit }}</span>-->
+
+<!--	  <p class="space-above"><a href="#">See all cafes</a></p>-->
+<!--      </form>-->
+    </div>
+  </div>
+</div>
+
+{% endblock %}
